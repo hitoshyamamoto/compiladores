@@ -63,8 +63,8 @@ A análise sintática será construída com base em uma gramática livre de cont
 | `TK_OPEN_R_BRACKET` | `(`                        | `(`                       | Blocos de comandos / Símbolos especiais            |
 | `TK_CLOSE_R_BRACKET`| `)`                        | `)`                       | Blocos de comandos / Símbolos especiais            |
 | `TK_IDENT`          | `[a-zA-Z_][a-zA-Z0-9_]*`   | `variavel1`, `_soma`      | Identificadores                                    |
-| `TK_INT`            | `[0-9]+`                   | `42`                      | Tipos de dados                                     |
-| `TK_FLOAT`          | `[0-9]+\.[0-9]+`           | `3.14`                    | Tipos de dados                                     |
+| `TK_INT`            | `^[+-]?[0-9]\d*$`          | `42`                      | Tipos de dados                                     |
+| `TK_FLOAT`          | `^[+-]?[0-9]\d*(\.\d+)?$`  | `3.14`                    | Tipos de dados                                     |
 | `TK_CHAR`           | `'.'`                      | `'a'`                     | Tipos de dados                                     |
 | `TK_STRING`         | `"[^"]*"`                  | `"oi"`                    | Tipos de dados                                     |
 | `TK_ASSIGN`         | `=`                        | `=`                       | Comandos de Atribuição                             |
@@ -97,7 +97,7 @@ A análise sintática será construída com base em uma gramática livre de cont
 | `TK_COMMA`          | `,`                        | `,`                       | Símbolos especiais                                 |
 | `TK_DOT`            | `.`                        | `.`                       | Símbolos especiais                                 |
 | `TK_COMMENT`        | `#`                        | `# este é o comantário`   | Comentários em linha                               |
-| `TK_COMMENT_BLOCK`  | `###((?:(?!###)[\s\S])*?)(?:###\|$)` | `### comantário ####`  | Comentários em bloco                        |
+| `TK_COMMENT_BLOCK`  | `###((?:(?!###)[\s\S])*?)(?:###\|$)` | `### comentário ####`  | Comentários em bloco                        |
 
 Obs:
 
