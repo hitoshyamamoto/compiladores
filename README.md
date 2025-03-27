@@ -100,17 +100,23 @@ A análise sintática será construída com base em uma gramática livre de cont
 | `TK_COMMENT_BLOCK`  | `###((?:(?!###)[\s\S])*?)(?:###\|$)` | `### comantário ####`  | Comentários em bloco                        |
 
 Obs:
+
 Em relação ao `TK_COMMENT_BLOCK`, depende do **lexer** e do **suporte a “greedy” ou “non-greedy”** em expressões regulares.
+
 ###((?:(?!###)[\s\S])*?)(?:###|$)
 
 Em relação ao `TK_DOT`, para dicernir entre "." para função e para número (float, por exemplo), a prioridade das regras pode resolver isso.
+
 Em relação a "EOF", [ainda está sendo estudado]
+
 Em relação a "\n", "\t" e "\0", [ainda está sendo estudado]
+
 Em relação a "e" (constante de Euler), "pi" (constante de Pi), "phi" (número de ouro) e "i" (unidade imaginária), [ainda está sendo estudado]
 
 # Autômatos Finitos (AFD, AFN ou AFN-estendido a partir do Método de Thompson)
 
 AFD: Autômatos finitos determinísticos
+
 AFN: Autômato finito não determinístico
 
 [ em breve ]
